@@ -10,7 +10,7 @@ class Wallet extends React.Component {
   }
 
   render() {
-    const { email } = this.props;
+    const { email, coins } = this.props;
     return (
       <div>
         <div>
@@ -27,12 +27,12 @@ class Wallet extends React.Component {
             Descrição Despesa:
             <input data-testid="description-input" type="text" />
           </label>
-          {/* <label htmlFor="moeda">
-            Moeda
-            <select>
-              <option>{coins.map((coin) => <p key={ coin }>{coin}</p>)}</option>
+          <label htmlFor="moeda">
+            Moeda:
+            <select id="moeda">
+              {coins.map((coin) => <option key={ coin }>{coin}</option>)}
             </select>
-          </label> */}
+          </label>
           <label htmlFor="pagamento">
             Método de pagamento:
             <select data-testid="method-input">
