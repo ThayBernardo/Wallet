@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { userInfo } from '../actions';
+import '../css/Login.css';
 
 class Login extends React.Component {
   constructor() {
@@ -50,11 +51,12 @@ class Login extends React.Component {
   render() {
     const { validateButton, password, email } = this.state;
     return (
-      <div>
-        <div>
+      <div className="background">
+        <div className="fontColor">
           <label htmlFor="email">
             Email:
             <input
+              className="input"
               onChange={ this.onInputChange }
               data-testid="email-input"
               type="email"
@@ -63,10 +65,11 @@ class Login extends React.Component {
             />
           </label>
         </div>
-        <div>
+        <div className="fontColor">
           <label htmlFor="email">
             Senha:
             <input
+              className="input"
               onChange={ this.onInputChange }
               data-testid="password-input"
               type="password"
@@ -76,6 +79,7 @@ class Login extends React.Component {
           </label>
         </div>
         <button
+          className="button"
           onClick={ this.goToTheWallet }
           disabled={ !validateButton }
           type="button"
