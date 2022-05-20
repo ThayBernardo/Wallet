@@ -146,5 +146,4 @@ Wallet.propTypes = {
   email: PropTypes.string,
   coins: PropTypes.arrayOf,
 }.isRequerid;
-
 export default connect(mapStateToProps, mapDispatchToProps)(Wallet);
